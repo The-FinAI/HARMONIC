@@ -16,9 +16,9 @@ TASK_REGISTRY = {
     "german_train": syn.German_train,
     "syn_german_mistral": syn.Syn_German_Mistral,
     "syn_german_llama": syn.Syn_German_Llama,
-    # fraud
-    "fraud_test": syn.Fraud_test,
-    "fraud_train": syn.Fraud_train,
+
+    # regression:
+    "abalone_train": syn.Abalone_train,
 }
 
 ALL_TASKS = sorted(list(TASK_REGISTRY))
