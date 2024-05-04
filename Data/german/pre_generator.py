@@ -1,3 +1,5 @@
+import argparse
+
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.neighbors import NearestNeighbors
@@ -190,10 +192,20 @@ def pre_generator_data(real_data_path, pre_path, cols):
     save_ft_data(orig_data=ins_data, ft_path=pre_path, dataset_name="German", split_dev=False)
 
 
-if __name__ == "__main__":
-    data_path = "Data/german/raw/german_train_val.csv"
+def main(args):
     ft_data_path = "Data/german/generator/knn5_dict_ft.json"
     pre_path = "Data/german/generator/pre_knn5_dict.json"
     _, _, columns_name = german_columns()
-    ft_generator_data(raw_data_path=data_path, ft_path=ft_data_path, cols=columns_name, is_fil=False)
-    pre_generator_data(real_data_path=data_path, pre_path=pre_path, cols=columns_name)
+    ft_generator_data(raw_data_path=args.data_path, ft_path=ft_data_path, cols=columns_name, is_fil=False)
+    pre_generator_data(real_data_path=args.data_path, pre_path=pre_path, cols=columns_name)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("data_path", type=str, default="Data/german/raw/german_train.csv",
+                        hele="", required=True)
+    parser.add_argument("seed", type=int, default=416, help="")
+    parser.add_argument('knn_n', type=int, default=5)
+    arguments = parser.parse_args()
+
+    main(arguments)
