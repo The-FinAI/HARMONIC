@@ -34,4 +34,4 @@ def split_data(data_name, type, label, had_test=False):
         # data.to_csv('Data/' + data_name + '/raw/' + data_name + '_train_val.csv', index=False)
 
 
-split_data('buddy', 'classification', 'breed_category')
+split_data('diabetes', 'classification', 'Outcome')
