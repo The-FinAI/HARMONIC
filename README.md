@@ -5,29 +5,31 @@ A project for synthesizing data tables based on a large model.
 ## Contents
 
 - [SynData](#syndata)
+  - [Contents](#contents)
+    - [Examples](#examples)
 
 ### Examples
 
-**Data**
+Data
 
-```
+```bash
 pass
 ```
 
-**Train**
+Train
 
-```
+```bash
 pass
 ```
 
-**Sample**
+Sample
 
-```
+```bash
 pass
 ```
 
-**Eval**
+Eval
 
-```
+```bahs
 pass
 ```

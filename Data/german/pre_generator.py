@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.neighbors import NearestNeighbors
 from pre_llmeval_ft import save_ft_data, save_json
+import argparse
 
 
 def german_columns():
@@ -191,6 +192,14 @@ def pre_generator_data(real_data_path, pre_path, cols):
 
 
 if __name__ == "__main__":
+    # 传入参数
+    parser = argparse.ArgumentParser()
+    parser.add_argument('data_path', type=str, default="Data/german/raw/german_train.csv")
+    parser.add_argument('train_size', type=int)
+    parser.add_argument('eval_type', type=str)
+    parser.add_argument('device', type=str)
+
+
     data_path = "Data/german/raw/german_train_val.csv"
     ft_data_path = "Data/german/generator/knn5_dict_ft.json"
     pre_path = "Data/german/generator/pre_knn5_dict.json"
