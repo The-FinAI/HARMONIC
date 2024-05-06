@@ -401,6 +401,10 @@ if __name__ == "__main__":
     main(arguments)
 
     """
-    "diabetes": ["binary classification", "diabetic patients"]
-    "german": ["binary classification", "user credit scores"]
+    "diabetes": python scripts/preprocess_data.py diabetes 416 5 "binary classification" "diabetic patients" dict 491
+    "german": python scripts/preprocess_data.py german 416 5 "binary classification" "user credit scores" dict 700
+    "adult": python scripts/preprocess_data.py adult 416 5 "binary classification" "individual annual income" dict 26048
+    "buddy": python scripts/preprocess_data.py buddy 416 5 "multi classification" "adopting animals" dict 12053
+    "abalone": python scripts/preprocess_data.py abalone 416 5 "regression" "abalone" dict 2672
+    "california": python scripts/preprocess_data.py abalone 416 5 "regression" "California housing prices" dict 13209
     """
