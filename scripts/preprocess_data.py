@@ -85,12 +85,13 @@ def process(df, mode, k, sample_format):
     if sample_format == "None":
         prompt = " "  # todo
     elif sample_format == "dict":
-        prompt = f"Here are {k-1} tabular data about {arguments.des}, " \
+        n = k-1 if mode == 'train' else k
+        prompt = f"Here are {n} tabular data about {arguments.des}, " \
              f"each containing {len(col_list)} columns of features and 1 column of labels, " \
              f"where the {col_list[-1]} column is a {arguments.task_type} label. " \
              f"I will transmit the data to you in JSON format. " \
-             f"Please generate an approximate sample based on these {k-1} examples."
-
+             f"Please generate an approximate sample based on these {n} examples."
+        # todo
     for j in range(0, len(data), k):
         query = f"{prompt}\n"
         answer = ""
@@ -406,5 +407,5 @@ if __name__ == "__main__":
     "adult": python scripts/preprocess_data.py adult 416 5 "binary classification" "individual annual income" dict 26048
     "buddy": python scripts/preprocess_data.py buddy 416 5 "multi classification" "adopting animals" dict 12053
     "abalone": python scripts/preprocess_data.py abalone 416 5 "regression" "abalone" dict 2672
-    "california": python scripts/preprocess_data.py abalone 416 5 "regression" "California housing prices" dict 13209
+    "california": python scripts/preprocess_data.py california 416 5 "regression" "California housing prices" dict 13209
     """

@@ -143,8 +143,9 @@ class TrainingArguments(TrainingArguments):
         metadata={"help": "LoRA config file."},
     )
     ddp_find_unused_parameters: bool = field(
-        default=False, metadata={"help": "ddp_find_unused_parameters"}
+        default=True, metadata={"help": "ddp_find_unused_parameters"}
     )
+    # `ddp_find_unused_parameters`: Will default to `False` if gradient checkpointing is used, `True` otherwise.
     gradient_checkpointing: bool = field(
         default=False, metadata={"help": "gradient_checkpointing"}
     )
@@ -167,7 +168,7 @@ class TrainingArguments(TrainingArguments):
         },
     )
     report_to: str = field(
-        default="wandb", metadata={"help": "The list of integrations to report the results and logs to."}
+        default=None, metadata={"help": "The list of integrations to report the results and logs to."}
     )
     deepspeed: str = field(
         default=None,
@@ -201,6 +202,8 @@ def main():
 
     world_size = int(os.environ.get("WORLD_SIZE", 1))
     global_rank = torch.distributed.get_rank()
+    if not os.path.exists(training_args.output_dir):
+        os.makedirs(training_args.output_dir, exist_ok=True)
     log_file = os.path.join(training_args.output_dir, "print_log.txt")
 
     # Setup logging
@@ -367,35 +370,43 @@ def main():
         data_args.train_file
     )
 
+    if not os.path.exists(model_args.cache_dir):
+        os.makedirs(model_args.cache_dir, exist_ok=True)
     with torch_distributed_zero_first(global_rank):        
         train_data = load_dataset(
             "json",
             data_files=data_args.train_file,
             cache_dir=model_args.cache_dir
         )
-        
-        val_data = load_dataset(
-            "json",
-            data_files=data_args.validation_file,
-            cache_dir=model_args.cache_dir
-        )
 
         train_data = train_data["train"].shuffle(seed=215).map(
-            partial(
-                generate_and_tokenize_prompt,
-                training_args.model_max_length, 
-                tokenizer
-            )
-        )
-        
-        val_data = val_data["train"].shuffle(seed=215).map(
             partial(
                 generate_and_tokenize_prompt,
                 training_args.model_max_length,
                 tokenizer
             )
         )
-        
+
+        # if validation_file is given:
+        if data_args.validation_file:
+            val_data = load_dataset(
+                "json",
+                data_files=data_args.validation_file,
+                cache_dir=model_args.cache_dir
+            )
+
+            val_data = val_data["train"].shuffle(seed=215).map(
+                partial(
+                    generate_and_tokenize_prompt,
+                    training_args.model_max_length,
+                    tokenizer
+                )
+            )
+        else:
+            import pdb
+            pdb.set_trace()
+            val_data = train_data[:10]   # !!! todo
+
 
     for i in range(2):
         print_rank_0(
