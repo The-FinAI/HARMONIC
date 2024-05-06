@@ -387,11 +387,15 @@ if __name__ == "__main__":
     prompt_info = {
         "german": "Evaluate the creditworthiness of a customer with the following financial profile. "
                   "Respond with only either 'good' or 'bad'. \nText: ",
-        "diabetes": "XXX",
-        "adult": "XXX",
-        "buddy": "XXX",
-        "abalone": "XXX",
-        "california": "XXX",
+        "diabetes": "Predict whether a patient has diabetes, based on certain diagnostic measurements. "
+                  "Respond with only either 'negative' or 'positive'. \nText: ",
+        "adult": "Determine whether a person makes over $50K a year based on personal attributes. "
+                 "Respond with only either 'good' or 'bad'. \nText: ",
+        "buddy": "Detect the breed of an animal based on its condition, appearance, and other factors. "
+                 "Respond with only either 'A', 'B' or 'C'. \nText: ",
+        "abalone": "Predict the age of abalone from physical measurements. Respond with an integer. \nText: ",
+        "california": "Predict the median house price in California based on features such as population count, "
+                      "median income, median house age, etc. Respond with an integer. \nText: ",
     }
 
     main(arguments)
