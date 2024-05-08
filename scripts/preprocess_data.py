@@ -186,7 +186,7 @@ def ft_generator_data(raw_data_path, ft_path, cols, is_fil, n, sample_format):
     """
     # data_path, n, features
     knn_data = knn_fit(data_path=raw_data_path, n=n, features=cols)
-    if is_fil:
+    if is_fil and arguments.task_type in 'classification':
         knn_data = filter_data(df=knn_data, r=2, n=n)
     # process(df, col_list, mode, k)
     ins_data = process(df=knn_data, k=n+1, mode="train", sample_format=sample_format)
