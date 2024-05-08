@@ -2,6 +2,7 @@ import argparse
 import os.path
 import json
 
+import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.neighbors import NearestNeighbors
@@ -133,13 +134,13 @@ def get_line_sample(col_list, line_list, sample_format):
 
 def filter_label(target_output, outputs, r, n):
     if target_output.iloc[-1] == 1:
-        if outputs.sum().iloc[-1] <= r:
+        if outputs.select_dtypes(include=np.number).sum().iloc[-1] <= r:
             # 如果标签为1，则过滤大小为k且不超过r条标签为1的样本
             return False
         else:
             return True
     elif target_output.iloc[-1] == 0:
-        if outputs.sum().iloc[-1] >= n - r:
+        if outputs.select_dtypes(include=np.number).sum().iloc[-1] >= n - r:
             return False
         else:
             return True
@@ -186,7 +187,7 @@ def ft_generator_data(raw_data_path, ft_path, cols, is_fil, n, sample_format):
     """
     # data_path, n, features
     knn_data = knn_fit(data_path=raw_data_path, n=n, features=cols)
-    if is_fil and arguments.task_type in 'classification':
+    if is_fil and 'classification' in arguments.task_type:
         knn_data = filter_data(df=knn_data, r=2, n=n)
     # process(df, col_list, mode, k)
     ins_data = process(df=knn_data, k=n+1, mode="train", sample_format=sample_format)

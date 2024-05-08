@@ -1,4 +1,3 @@
-
 from transformers.utils import add_start_docstrings
 from transformers.trainer_utils import get_last_checkpoint
 from transformers.trainer_pt_utils import torch_distributed_zero_first
@@ -25,7 +24,6 @@ sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 # print(sys.path)
 # sys.exit()
-
 
 
 from utils import get_model_param_count
@@ -143,11 +141,11 @@ class TrainingArguments(TrainingArguments):
         metadata={"help": "LoRA config file."},
     )
     ddp_find_unused_parameters: bool = field(
-        default=True, metadata={"help": "ddp_find_unused_parameters"}
+        default=False, metadata={"help": "ddp_find_unused_parameters"}
     )
     # `ddp_find_unused_parameters`: Will default to `False` if gradient checkpointing is used, `True` otherwise.
     gradient_checkpointing: bool = field(
-        default=False, metadata={"help": "gradient_checkpointing"}
+        default=True, metadata={"help": "gradient_checkpointing"}
     )
     # https://discuss.huggingface.co/t/wandb-does-not-display-train-eval-loss-except-for-last-one/9170
     evaluation_strategy: str = field(
@@ -232,9 +230,9 @@ def main():
     # Detecting last checkpoint.
     last_checkpoint = None
     if (
-        os.path.isdir(training_args.output_dir)
-        and training_args.do_train
-        and not training_args.overwrite_output_dir
+            os.path.isdir(training_args.output_dir)
+            and training_args.do_train
+            and not training_args.overwrite_output_dir
     ):
         last_checkpoint = get_last_checkpoint(training_args.output_dir)
         if last_checkpoint is None and len(os.listdir(training_args.output_dir)) > 0:
@@ -243,7 +241,7 @@ def main():
                 "Use --overwrite_output_dir to overcome."
             )
         elif (
-            last_checkpoint is not None and training_args.resume_from_checkpoint is None
+                last_checkpoint is not None and training_args.resume_from_checkpoint is None
         ):
             logger.info(
                 f"Checkpoint detected, resuming training at {last_checkpoint}. To avoid this behavior, change "
@@ -327,8 +325,8 @@ def main():
         )
         lora_config = json.load(open(training_args.lora_config))
         print_rank_0(
-            "Lora config: {}".format(lora_config), 
-            log_file, 
+            "Lora config: {}".format(lora_config),
+            log_file,
             global_rank
         )
         if training_args.use_int8_training:
@@ -372,7 +370,7 @@ def main():
 
     if not os.path.exists(model_args.cache_dir):
         os.makedirs(model_args.cache_dir, exist_ok=True)
-    with torch_distributed_zero_first(global_rank):        
+    with torch_distributed_zero_first(global_rank):
         train_data = load_dataset(
             "json",
             data_files=data_args.train_file,
@@ -387,15 +385,14 @@ def main():
             )
         )
 
-        # if validation_file is given:
+        # if validation_file is not given:
         if data_args.validation_file:
             val_data = load_dataset(
                 "json",
                 data_files=data_args.validation_file,
                 cache_dir=model_args.cache_dir
             )
-
-            val_data = val_data["train"].shuffle(seed=215).map(
+            val_data = val_data['train'].shuffle(seed=215).map(
                 partial(
                     generate_and_tokenize_prompt,
                     training_args.model_max_length,
@@ -403,21 +400,33 @@ def main():
                 )
             )
         else:
-            import pdb
-            pdb.set_trace()
-            val_data = train_data[:10]   # !!! todo
+            val_data = load_dataset(
+                "json",
+                data_files=data_args.train_file,
+                split="train[:10]",
+                cache_dir=model_args.cache_dir
+            )
+            val_data = val_data.shuffle(seed=215).map(
+                partial(
+                    generate_and_tokenize_prompt,
+                    training_args.model_max_length,
+                    tokenizer
+                )
+            )
 
+        import pdb
+        pdb.set_trace()
 
     for i in range(2):
         print_rank_0(
-            "Eval tokenized example: {}".format(val_data[i]), 
-            log_file, 
+            "Eval tokenized example: {}".format(val_data[i]),
+            log_file,
             global_rank
         )
     for i in range(2):
         print_rank_0(
-            "Train tokenized example: {}".format(train_data[i]), 
-            log_file, 
+            "Train tokenized example: {}".format(train_data[i]),
+            log_file,
             global_rank
         )
 
@@ -425,13 +434,13 @@ def main():
     num_gpus = torch.cuda.device_count()
 
     batch_size = (
-        training_args.per_device_train_batch_size
-        * training_args.world_size
-        * training_args.gradient_accumulation_steps
+            training_args.per_device_train_batch_size
+            * training_args.world_size
+            * training_args.gradient_accumulation_steps
     )
     # train steps
     t_total = math.ceil(training_nums / batch_size) * \
-        training_args.num_train_epochs
+              training_args.num_train_epochs
     # eval steps
     training_args.eval_steps = max(t_total // 5, 5)
     # save steps
@@ -488,13 +497,13 @@ def main():
     # Train!
     len_dataloader = len(trainer.get_train_dataloader())
     num_update_steps_per_epoch = (
-        len_dataloader // training_args.gradient_accumulation_steps
+            len_dataloader // training_args.gradient_accumulation_steps
     )
 
     total_train_batch_size = (
-        training_args.train_batch_size
-        * training_args.gradient_accumulation_steps
-        * training_args.world_size
+            training_args.train_batch_size
+            * training_args.gradient_accumulation_steps
+            * training_args.world_size
     )
     num_examples = trainer.num_examples(trainer.get_train_dataloader())
     num_train_samples = num_examples * training_args.num_train_epochs
@@ -503,8 +512,8 @@ def main():
     print_rank_0("***** Running training *****", log_file, global_rank)
     print_rank_0(f"  Num examples = {num_examples}", log_file, global_rank)
     print_rank_0(
-        f"  Num train samples = {num_train_samples}", 
-        log_file, 
+        f"  Num train samples = {num_train_samples}",
+        log_file,
         global_rank
     )
     print_rank_0(f"  world_size = {world_size}", log_file, global_rank)
@@ -519,8 +528,8 @@ def main():
         global_rank,
     )
     print_rank_0(
-        f"  Total optimization steps = {max_steps}", 
-        log_file, 
+        f"  Total optimization steps = {max_steps}",
+        log_file,
         global_rank
     )
 
