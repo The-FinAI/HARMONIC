@@ -414,9 +414,6 @@ def main():
                 )
             )
 
-        import pdb
-        pdb.set_trace()
-
     for i in range(2):
         print_rank_0(
             "Eval tokenized example: {}".format(val_data[i]),

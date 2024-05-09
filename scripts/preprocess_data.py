@@ -88,7 +88,7 @@ def process(df, mode, k, sample_format):
     elif sample_format == "dict":
         n = k-1 if mode == 'train' else k
         prompt = f"Here are {n} tabular data about {arguments.des}, " \
-             f"each containing {len(col_list)} columns of features and 1 column of labels, " \
+             f"each containing {len(col_list)-1} columns of features and 1 column of labels, " \
              f"where the {col_list[-1]} column is a {arguments.task_type} label. " \
              f"I will transmit the data to you in JSON format. " \
              f"Please generate an approximate sample based on these {n} examples."
