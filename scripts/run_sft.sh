@@ -9,6 +9,7 @@ SAVE_PATH=results/FT-CP/llama2-7b-chat/${data_name}
 
 # LoRA without 8bit
 torchrun --nproc_per_node 1 \
+--master-port=10086 \
     src/FT/entry_point/sft_train.py \
     --model_name_or_path ${model_name_or_path} \
     --fp16 \

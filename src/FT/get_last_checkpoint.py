@@ -3,7 +3,7 @@ import argparse
 
 def main(folder):
     last_checkpoint = get_last_checkpoint(folder)
-    return last_checkpoint
+    print(last_checkpoint)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
