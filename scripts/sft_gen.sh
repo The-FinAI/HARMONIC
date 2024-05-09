@@ -41,7 +41,6 @@ torchrun --nproc_per_node 1 \
 
 ## merge_lora
 lora_path=$(python src/FT/get_last_checkpoint.py --folder $SAVE_PATH)
-#lora_path=results/FT-CP/llama2-7b-chat-gen/${data_name}/checkpoint-560  #todo
 output_path=results/FT-LLMs/llama2-7b-chat-gen/${data_name}-gen
 
 python src/FT/merge_llama_with_lora.py \

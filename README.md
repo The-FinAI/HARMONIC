@@ -25,7 +25,7 @@ python scripts/preprocess_data.py german 416 5 "binary classification" "user cre
 Template and example
 
 ```bash
-pass
+sh scripts/sft_gen.sh
 ```
 
 <u>Sample.</u>
@@ -33,13 +33,15 @@ pass
 Template and example
 
 ```bash
-pass
+python scripts/OurModel.py [data_name] [sample_num] [seed] [temperature] [max_length] [task_type]
+python scripts/OurModel.py german 700 2416 0.7 2048 'binary classification'
 ```
 
 <u>Eval</u>
 
 Template and example
 
-```bahs
-pass
+```bash
+sh scripts/sft_lle.sh
+sh scripts/eval-llama2.sh
 ```

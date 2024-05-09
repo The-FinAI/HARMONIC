@@ -1,7 +1,8 @@
 export CUDA_VISIBLE_DEVICES=0
-tasks_name=german_train,german_test
-pretrained_model=results/FT-LLMs/German-LLaMA2-Chat_e8_b10
-write_out_path=results/evalllm_result2/Real-German-Llama2-chat_e8_b10
+data_name=diabetes  # german adult diabetes buddy abalone california
+tasks_name=${data_name}_test
+pretrained_model=results/FT-LLMs/llama2-7b-chat-ds/${data_name}-ds
+write_out_path=results/Eval-LLMs/llama2-7b-chat-ds/llama2-7b-chat-gen-${data_name}
 
 log_path=${write_out_path}/${tasks_name}.log
 mkdir -p "$(dirname "${write_out_path}")"
