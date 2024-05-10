@@ -11,7 +11,7 @@ A project for synthesizing data tables based on a large model.
 
 ### Examples
 
-<u>Preprocess Data.</u>
+<ins>Preprocess Data.</ins>
 
 Template and example
 
@@ -20,7 +20,7 @@ python scripts/preprocess_data.py [data_name] [seed] [knn_n] [task_type] [des] [
 python scripts/preprocess_data.py german 416 5 "binary classification" "user credit scores" dict 700
 ```
 
-<u>Train Generator.</u>
+<ins>Train Generator.</ins>
 
 Template and example
 
@@ -28,7 +28,7 @@ Template and example
 sh scripts/sft_gen.sh
 ```
 
-<u>Sample.</u>
+<ins>Sample.</ins>
 
 Template and example
 
@@ -37,7 +37,7 @@ python scripts/sample.py [data_name] [sample_num] [seed] [temperature] [max_leng
 python scripts/sample.py german 700 2416 0.7 2048 'binary classification'
 ```
 
-<u>Eval</u>
+<ins>Eval</ins>
 
 Template and example
 
