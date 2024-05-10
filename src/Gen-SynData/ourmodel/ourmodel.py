@@ -56,7 +56,7 @@ class OurModel():
         # self.conditional_col_dist = None
 
     def tabula_sample(self, starting_prompts: tp.Union[str, list[str]], temperature: float = 0.7, max_length: int = 100,
-                      device: str = "cuda") -> pd.DataFrame:
+                      device: str = "cuda", seed: int = 2416) -> pd.DataFrame:
         """ Generate synthetic tabular data samples conditioned on a given input.
 
         Args:
@@ -85,6 +85,9 @@ class OurModel():
         for prompt in tqdm(starting_prompts):
             start_token = torch.tensor(self.tokenizer(prompt)["input_ids"]).to(device)
 
+            # 设置随机种子
+            torch.manual_seed(seed)
+
             # Generate tokens
             gen = self.model.generate(input_ids=torch.unsqueeze(start_token, 0), max_length=max_length,
                                       do_sample=True, temperature=temperature, pad_token_id=50256)
@@ -99,6 +102,8 @@ class OurModel():
         end_index = decoded_data[0].find("}", start_index)
         # 截取字符串
         result = [decoded_data[0][start_index:end_index+1]]
+        # import pdb
+        # pdb.set_trace()
         df_gen = _convert_text_to_tabular_data(result[0], pd.DataFrame(columns=self.columns))
         return df_gen
 

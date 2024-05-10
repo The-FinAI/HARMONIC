@@ -3,11 +3,12 @@
 export CUDA_VISIBLE_DEVICES=0
 model_name_or_path=/media/data1/fengduanyu/llama-2-7b-chat-T/
 data_name=diabetes  # german adult diabetes buddy abalone california
-epoch_num=7
+epoch_num=1
 batch_size=16
 lr=3e-4
 seed=2416
 SAVE_PATH=results/FT-CP/llama2-7b-chat-gen/${data_name}
+mkdir -p $SAVE_PATH
 
 # LoRA without 8bit
 torchrun --nproc_per_node 1 \

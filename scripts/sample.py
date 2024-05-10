@@ -4,9 +4,11 @@ import json
 import random
 import numpy as np
 import subprocess
+import os
 import sys
 
-sys.path.append('src/Gen-SynData/ourmodel')
+
+sys.path.append('src/Gen-SynData/')
 
 from ourmodel import OurModel
 
@@ -28,15 +30,14 @@ def get_columns(df):
 def sample(data_name, model, real_data, processed_data, sample_num, temperature, max_length, seed):
     cat_columns, num_columns, columns= get_columns(real_data)
     synthetic_df = pd.DataFrame(columns=columns)
-    # todo 随机种子
-    np.random.seed(seed)
-    random.seed(seed)
     for index in range(sample_num):
-        # todo 随机种子
         synthetic_data = model.tabula_sample(starting_prompts=processed_data[index],
-                                             temperature=temperature, max_length=max_length)
+                                             temperature=temperature, max_length=max_length, seed=seed)
         synthetic_df = pd.concat([synthetic_df, synthetic_data], ignore_index=True)
-    synthetic_df.to_csv(f'Data/{data_name}/syn/ourmodel.csv', index=False)
+    save_path = f'Data/{data_name}/syn/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path, exist_ok=True)
+    synthetic_df.to_csv(save_path+'ourmodel3.csv', index=False)
     return
 
 def main(args):
@@ -47,7 +48,7 @@ def main(args):
     seed = args.seed
     real_data = pd.read_csv(f'Data/{data_name}/raw/{data_name}_train.csv')
     pre_data = load_data(data_name)
-    model = OurModel(llm=f'results/FT-LLMs/llama2-7b-chat-gen/${data_name}-gen',
+    model = OurModel(llm=f'results/FT-LLMs/llama2-7b-chat-gen/{data_name}-gen',
                      data=real_data)
     sample(data_name=data_name, model=model, real_data=real_data, processed_data=pre_data,
            sample_num=sample_num, temperature=temperature, max_length=max_length, seed=seed)
@@ -68,6 +69,6 @@ if __name__ == "__main__":
     # 生成合成数据
     main(args)
 
-    # 生成微调下游任务需要的数据
-    subprocess.run(['python3.9', "scripts/pre_llmeval_ft.py",
-                    f'{args.data_name}', "ourmodel", f'{args.task_type}'], check=True)
+    # # # 生成微调下游任务需要的数据
+    # subprocess.run(['python3.9', "scripts/pre_llmeval_ft.py",
+    #                 f'{args.data_name}', "ourmodel", f'{args.task_type}'], check=True)
