@@ -22,7 +22,7 @@ python scripts/preprocess_data.py german 416 5 "binary classification" "user cre
 
 <u>Train Generator.</u>
 
-Example
+Template and example
 
 ```bash
 sh scripts/sft_gen.sh
@@ -39,7 +39,7 @@ python scripts/sample.py german 700 2416 0.7 2048 'binary classification'
 
 <u>Eval</u>
 
-Example
+Template and example
 
 ```bash
 sh scripts/sft_lle.sh
