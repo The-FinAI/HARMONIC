@@ -69,6 +69,6 @@ if __name__ == "__main__":
     # 生成合成数据
     main(args)
 
-    # # # 生成微调下游任务需要的数据
-    # subprocess.run(['python3.9', "scripts/pre_llmeval_ft.py",
-    #                 f'{args.data_name}', "ourmodel", f'{args.task_type}'], check=True)
+    # # 生成微调下游任务需要的数据
+    subprocess.run(['python3.9', "scripts/pre_llmeval_ft.py",
+                    f'{args.data_name}', "ourmodel", f'{args.task_type}'], check=True)
