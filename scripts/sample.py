@@ -27,17 +27,17 @@ def get_columns(df):
 
     return cat_f, num_f, features
 
-def sample(data_name, model, real_data, processed_data, sample_num, temperature, max_length, seed):
+def sample(data_name, model, real_data, processed_data, sample_num, temperature, max_length, device, seed):
     cat_columns, num_columns, columns= get_columns(real_data)
     synthetic_df = pd.DataFrame(columns=columns)
     for index in range(sample_num):
-        synthetic_data = model.tabula_sample(starting_prompts=processed_data[index],
-                                             temperature=temperature, max_length=max_length, seed=seed)
+        synthetic_data = model.tabula_sample(starting_prompts=processed_data[index], temperature=temperature,
+                                             max_length=max_length, device=device, seed=seed)
         synthetic_df = pd.concat([synthetic_df, synthetic_data], ignore_index=True)
     save_path = f'Data/{data_name}/syn/'
     if not os.path.exists(save_path):
         os.makedirs(save_path, exist_ok=True)
-    synthetic_df.to_csv(save_path+'ourmodel3.csv', index=False)
+    synthetic_df.to_csv(save_path+'ourmodel.csv', index=False)
     return
 
 def main(args):
@@ -46,12 +46,14 @@ def main(args):
     temperature = args.temperature
     max_length = args.max_length
     seed = args.seed
+    device = args.device
     real_data = pd.read_csv(f'Data/{data_name}/raw/{data_name}_train.csv')
     pre_data = load_data(data_name)
     model = OurModel(llm=f'results/FT-LLMs/llama2-7b-chat-gen/{data_name}-gen',
                      data=real_data)
     sample(data_name=data_name, model=model, real_data=real_data, processed_data=pre_data,
-           sample_num=sample_num, temperature=temperature, max_length=max_length, seed=seed)
+           sample_num=sample_num, temperature=temperature, max_length=max_length,
+           device=device, seed=seed)
 
 
 if __name__ == "__main__":
@@ -64,6 +66,7 @@ if __name__ == "__main__":
     parser.add_argument("max_length", type=int, default=2048)
     parser.add_argument("task_type", type=str,
                         choices=['binary classification', 'multi classification', 'regression'])
+    parser.add_argument("device", type=str, default="cuda:0")
     args = parser.parse_args()
 
     # 生成合成数据

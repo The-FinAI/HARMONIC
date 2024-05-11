@@ -33,8 +33,8 @@ sh scripts/sft_gen.sh
 Template and example
 
 ```bash
-python scripts/sample.py [data_name] [sample_num] [seed] [temperature] [max_length] [task_type]
-python scripts/sample.py german 700 2416 0.7 2048 'binary classification'
+python scripts/sample.py [data_name] [sample_num] [seed] [temperature] [max_length] [task_type] [device]
+python scripts/sample.py german 700 2416 0.7 2048 'binary classification' 'cuda:0'
 ```
 
 <ins>Eval</ins>
