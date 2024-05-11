@@ -238,12 +238,13 @@ def main(args):
     data_name = args.data_name
     syn_method = args.method_name
     task_type = args.task_type
+    seed = args.seed
     # ft_data(data_name=args.data_name, method=args.method_name, task_type=args.task_type)
     ft_files = f'Data/{data_name}/ft/'
     if not os.path.exists(ft_files):
         os.makedirs(ft_files)
-    pre_syn_path = f'Data/{data_name}/syn/{syn_method}.csv'
-    ft_data_path = f'{ft_files}{syn_method}_ft.json'
+    pre_syn_path = f'Data/{data_name}/syn/{syn_method}-{seed}.csv'
+    ft_data_path = f'{ft_files}{syn_method}-{seed}_ft.json'
     prompt_data = get_eval_data(input_path=pre_syn_path, task=data_name, task_type=task_type)
     instru_data = get_instruction_data(prompt_data=prompt_data)
     save_ft_data(orig_data=instru_data, ft_path=ft_data_path)
@@ -254,6 +255,7 @@ if __name__ == "__main__":
     parser.add_argument("data_name", type=str, default="diabetes")
     parser.add_argument("method_name", type=str, default='great')
     parser.add_argument("task_type", type=str, choices=['binary classification', 'multi classification', 'regression'])
+    parser.add_argument("seed", type=str)
     args = parser.parse_args()
 
     prompt_info = {

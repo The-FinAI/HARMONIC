@@ -37,7 +37,7 @@ def sample(data_name, model, real_data, processed_data, sample_num, temperature,
     save_path = f'Data/{data_name}/syn/'
     if not os.path.exists(save_path):
         os.makedirs(save_path, exist_ok=True)
-    synthetic_df.to_csv(save_path+'ourmodel.csv', index=False)
+    synthetic_df.to_csv(f'{save_path}ourmodel-{seed}.csv', index=False)
     return
 
 def main(args):
@@ -49,7 +49,7 @@ def main(args):
     device = args.device
     real_data = pd.read_csv(f'Data/{data_name}/raw/{data_name}_train.csv')
     pre_data = load_data(data_name)
-    model = OurModel(llm=f'results/FT-LLMs/llama2-7b-chat-gen/{data_name}-gen',
+    model = OurModel(llm=f'results/FT-LLMs/llama2-7b-chat-gen/{data_name}-${seed}-gen',
                      data=real_data)
     sample(data_name=data_name, model=model, real_data=real_data, processed_data=pre_data,
            sample_num=sample_num, temperature=temperature, max_length=max_length,
@@ -74,4 +74,4 @@ if __name__ == "__main__":
 
     # # 生成微调下游任务需要的数据
     subprocess.run(['python3.9', "scripts/pre_llmeval_ft.py",
-                    f'{args.data_name}', "ourmodel", f'{args.task_type}'], check=True)
+                    f'{args.data_name}', "ourmodel", f'{args.task_type}', args.seed], check=True)

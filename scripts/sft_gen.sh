@@ -3,11 +3,12 @@
 export CUDA_VISIBLE_DEVICES=0
 model_name_or_path=/media/data1/fengduanyu/llama-2-7b-chat-T/
 data_name=diabetes  # german adult diabetes buddy abalone california
+seed=2416   #
+############# 以下内容无需修改
 epoch_num=1
 batch_size=16
 lr=3e-4
-seed=2416
-SAVE_PATH=results/FT-CP/llama2-7b-chat-gen/${data_name}
+SAVE_PATH=results/FT-CP/llama2-7b-chat-gen/${data_name}-${seed}
 mkdir -p $SAVE_PATH
 
 # LoRA without 8bit
@@ -42,7 +43,7 @@ torchrun --nproc_per_node 1 \
 
 ## merge_lora
 lora_path=$(python src/FT/get_last_checkpoint.py --folder $SAVE_PATH)
-output_path=results/FT-LLMs/llama2-7b-chat-gen/${data_name}-gen
+output_path=results/FT-LLMs/llama2-7b-chat-gen/${data_name}-${seed}-gen
 
 python src/FT/merge_llama_with_lora.py \
   --model_name_or_path ${model_name_or_path} \
