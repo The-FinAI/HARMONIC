@@ -16,18 +16,6 @@ A project for synthesizing data tables based on a large model.
 
 <table>
 
-<style>
-  .number-cell {
-    font-size: 14px;
-  }
-</style>
-
-<style>
-  .small-text {
-    font-size: 10px;
-  }
-</style>
-
   <tr>
   <td>Dataset</td>
   <td>Metric</td>
@@ -37,8 +25,8 @@ A project for synthesizing data tables based on a large model.
   <td>CTAB</td>
   <td>TabDDPM</td>
   <td>TABSYN</td>
-  <td>RTF</td>
-  <td>OM</td>
+  <td>REaLTabFormer</td>
+  <td>OurModel</td>
 
 
 
@@ -48,150 +36,150 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">GM</td>
     <td>MLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>LLE</td>
-        <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 
   <tr>
     <td rowspan="2">AD</td>
     <td>MLE</td>
-    <td class=number-cell>0.7469</td>
-    <td class=number-cell>0.7486<span class="small-text">±.0022</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell>0.7325<span class="small-text">±.0049</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td>0.7469</td>
+    <td>0.7486<small>±.0022</small></td>
+    <td></td>
+    <td>0.7325<small>±.0049</small></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 
   <tr>
     <td rowspan="2">DI</td>
     <td>MLE</td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.7226<span class="small-text">±.0255</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
-    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td></td>
+    <td>0.7226<small>±.0255</small></td>
+    <td></td>
+    <td>0.6632<small>±.0317</small></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     
 
   </tr>
   <tr>
     <td>LLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
 
   <tr>
     <td rowspan="2">BU</td>
     <td>MLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell>0.8380<span class="small-text">±.0056</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell>0.7934<span class="small-text">±.0064</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td>0.8380<small>±.0056</small></td>
+    <td></td>
+    <td>0.7934<small>±.0064</small></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 
   <tr>
     <td rowspan="2">AB</td>
     <td>MLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell>0.4013<span class="small-text">±.0141</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell>0.2153<span class="small-text">±.0730</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td>0.4013<small>±.0141</small></td>
+    <td></td>
+    <td>0.2153<small>±.0730</small></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     
 
   </tr>
   <tr>
     <td>LLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
 
   <tr>
     <td rowspan="2">CA</td>
     <td>MLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell>0<span class="small-text">±.0</span></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td>0<small>±.0</small></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
-    <td class=number-cell></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
 </table>
 
 
