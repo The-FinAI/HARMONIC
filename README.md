@@ -111,7 +111,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">BU</td>
     <td>MLE</td>
-    <td></td>
+    <td>0.8548<sub>±.0001</sub></td>
     <td></td>
     <td>0.8380<sub>±.0056</sub></td>
     <td></td>
