@@ -12,21 +12,21 @@ A project for synthesizing data tables based on a large model.
 
 ### Results
 
+
+
+<table>
+
 <style>
   .number-cell {
     font-size: 14px;
   }
 </style>
 
-html
-Copy code
 <style>
   .small-text {
     font-size: 10px; /* 设置小字体的大小 */
   }
 </style>
-
-<table>
 
   <tr>
   <td>Dataset</td>
