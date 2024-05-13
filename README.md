@@ -20,13 +20,14 @@ A project for synthesizing data tables based on a large model.
   <td>Dataset</td>
   <td>Metric</td>
   <td>Original</td>
+  <td>OurModel</td>
   <td>Smote</td>
   <td>CTGAN</td>
   <td>CTAB</td>
   <td>TabDDPM</td>
   <td>TABSYN</td>
   <td>REaLTabFormer</td>
-  <td>OurModel</td>
+  
 
 
 
@@ -61,9 +62,10 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">AD</td>
     <td>MLE</td>
     <td>0.7469</td>
-    <td>0.7486<small>±.0022</small></td>
     <td></td>
-    <td>0.7325<small>±.0049</small></td>
+    <td>0.7486<sub>±.0022</sub></td>
+    <td></td>
+    <td>0.7325<sub>±.0049</sub></td>
     <td></td>
     <td></td>
     <td></td>
@@ -85,6 +87,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">DI</td>
     <td>MLE</td>
+    <td></td>
     <td></td>
     <td>0.7226<small>±.0255</small></td>
     <td></td>
@@ -111,6 +114,7 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">BU</td>
     <td>MLE</td>
     <td></td>
+    <td></td>
     <td>0.8380<small>±.0056</small></td>
     <td></td>
     <td>0.7934<small>±.0064</small></td>
@@ -136,6 +140,7 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">AB</td>
     <td>MLE</td>
     <td></td>
+    <td></td>
     <td>0.4013<small>±.0141</small></td>
     <td></td>
     <td>0.2153<small>±.0730</small></td>
@@ -160,6 +165,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">CA</td>
     <td>MLE</td>
+    <td></td>
     <td></td>
     <td>0<small>±.0</small></td>
     <td></td>
