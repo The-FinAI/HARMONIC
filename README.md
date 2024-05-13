@@ -12,6 +12,20 @@ A project for synthesizing data tables based on a large model.
 
 ### Results
 
+<style>
+  .number-cell {
+    font-size: 14px;
+  }
+</style>
+
+html
+Copy code
+<style>
+  .small-text {
+    font-size: 10px; /* 设置小字体的大小 */
+  }
+</style>
+
 <table>
 
   <tr>
@@ -32,63 +46,152 @@ A project for synthesizing data tables based on a large model.
   </tr>
 
   <tr>
-    <td rowspan="2">German</td>
+    <td rowspan="2">GM</td>
     <td>MLE</td>
-    <td></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+        <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
   </tr>
-  <!-- <tr>
-    <td>Named Entity Recognition</td>
-    <td>It aims to extract nouns and phrases with legal characteristics from various legal documents.</td>
-  </tr>
-  <tr>
-    <td>Judicial Summarization</td>
-    <td>It aims to condense, summarize, and synthesize the content of legal documents.</td>
-  </tr>
-  <tr>
-    <td>Case Recognition</td>
-    <td>It aims to determine, based on the relevant description of the case, whether it pertains to a criminal or civil matter.</td>
-  </tr> -->
 
   <tr>
-    <td rowspan="2">Adult Income</td>
+    <td rowspan="2">AD</td>
     <td>MLE</td>
-    <td>0.7486±.0022</td>
+    <td class=number-cell>0.7469</td>
+    <td class=number-cell>0.7486<span class="small-text">±.0022</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell>0.7325<span class="small-text">±.0049</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
   </tr>
-  <!-- <tr>
-    <td>Criminal Judgment Prediction</td>
-    <td>It involves predicting the guilt or innocence of the defendant, along with the potential sentencing, based on the results of basic legal NLP, including the facts of the case, the evidence presented, and the applicable law articles. Therefore, it is divided into two types of tasks: Charge Prediction and prison Term Prediction.</td>
-  </tr>
-  <tr>
-    <td>Civil Trial Prediction</td>
-    <td>It involves using factual descriptions to predict the judgment of the defendant in response to the plaintiff’s claim, which we should consider the Controversial Focus.</td>
-  </tr>
-  <tr>
-    <td>Legal Question Answering</td>
-    <td>It utilizes the model’s legal knowledge to address the national judicial examination, which encompasses various specific legal types.</td>
-  </tr> -->
 
   <tr>
-    <td rowspan="2">Diabetes</td>
+    <td rowspan="2">DI</td>
     <td>MLE</td>
-    <td></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.7226<span class="small-text">±.0255</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    <td class=number-cell>0.6632<span class="small-text">±.0317</span></td>
+    
+
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
-  </tr>
-  <!-- <tr>
-    <td>Legal Consultation</td>
-    <td>It covers a wide range of legal areas and aims to provide accurate, clear, and reliable answers based on the legal questions provided by the different users. Therefore, it usually requires the sum of the aforementioned capabilities to provide professional and reliable analysis.</td>
-  </tr> -->
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
 
+  <tr>
+    <td rowspan="2">BU</td>
+    <td>MLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell>0.8380<span class="small-text">±.0056</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell>0.7934<span class="small-text">±.0064</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    
+  </tr>
+  <tr>
+    <td>LLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">AB</td>
+    <td>MLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell>0.4013<span class="small-text">±.0141</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell>0.2153<span class="small-text">±.0730</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    
+
+  </tr>
+  <tr>
+    <td>LLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+
+  <tr>
+    <td rowspan="2">CA</td>
+    <td>MLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell>0<span class="small-text">±.0</span></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    
+  </tr>
+  <tr>
+    <td>LLE</td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
+    <td class=number-cell></td>
 </table>
 
 
