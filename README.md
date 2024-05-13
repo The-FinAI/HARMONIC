@@ -24,7 +24,7 @@ A project for synthesizing data tables based on a large model.
 
 <style>
   .small-text {
-    font-size: 10px; /* 设置小字体的大小 */
+    font-size: 10px;
   }
 </style>
 
