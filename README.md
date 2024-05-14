@@ -12,7 +12,7 @@ A project for synthesizing data tables based on a large model.
 
 ### Results
 
-
+<center>Table1. The values of machine learning efficiency(MLE) and large language model efficiency(LLE)</center>
 
 <table>
 
@@ -181,6 +181,236 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+</table>
+
+
+<center>Table2. The values of f mean Distance to Closest Record
+(DCR), NewRowSynthesis(NRS) and PPL-diff(PPL)</center>
+
+<table>
+
+  <tr>
+  <td>Dataset</td>
+  <td>Metric</td>
+  <td>Original</td>
+  <td>OurModel</td>
+  <td>Smote</td>
+  <td>CTGAN</td>
+  <td>CTAB</td>
+  <td>TabDDPM</td>
+  <td>TABSYN</td>
+  <td>REaLTabFormer</td>
+  
+  </tr>
+
+  <tr>
+    <td rowspan="3">GM</td>
+    <td>NRS</td>
+    <td></td>
+    <td></td>
+    <td>0.9997</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">AD</td>
+    <td>NRS</td>
+    <td></td>
+    <td></td>
+    <td>0.9514</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="3">DI</td>
+    <td>NRS</td>
+    <td></td>
+    <td></td>
+    <td>1.0000</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">BU</td>
+    <td>NRS</td>
+    <td><sub></sub></td>
+    <td></td>
+    <td><sub></sub></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">AB</td>
+    <td>NRS</td>
+    <td><sub></sub></td>
+    <td></td>
+    <td><sub></sub></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">CA</td>
+    <td>NRS</td>
+    <td><sub></sub></td>
+    <td></td>
+    <td><sub></sub></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DCR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>PPL</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
 
