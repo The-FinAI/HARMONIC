@@ -37,9 +37,9 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">GM</td>
     <td>MLE</td>
+    <td>0.4971<sub>±.0032</sub></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>0.6405<sub>±0.0159</sub></td>
     <td></td>
     <td></td>
     <td></td>
@@ -161,9 +161,9 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">CA</td>
     <td>MLE</td>
+    <td>0.6674<sub>±.0001</sub></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>0.6395<sub>±.0062</sub></sub></td>
     <td></td>
     <td></td>
     <td></td>
