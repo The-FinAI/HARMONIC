@@ -11,7 +11,7 @@ A project for synthesizing data tables based on a large model.
 
 
 ### Results
-
+问题：CTAB生成时无法固定
 <center>Table1. The values of machine learning efficiency(MLE) and large language model efficiency(LLE)</center>
 
 <table>
@@ -41,7 +41,7 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td>0.6405<sub>±0.0159</sub></td>
     <td></td>
-    <td></td>
+    <td>0.5552<sub>±.0521</sub></td>
     <td></td>
     <td></td>
     <td></td>
@@ -310,9 +310,9 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">BU</td>
     <td>NRS</td>
-    <td><sub></sub></td>
     <td></td>
-    <td><sub></sub></td>
+    <td></td>
+    <td>0.9329</td>
     <td></td>
     <td></td>
     <td></td>
@@ -345,9 +345,9 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">AB</td>
     <td>NRS</td>
-    <td><sub></sub></td>
     <td></td>
-    <td><sub></sub></td>
+    <td></td>
+    <td> 0.8834</td>
     <td></td>
     <td></td>
     <td></td>
@@ -380,9 +380,9 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">CA</td>
     <td>NRS</td>
-    <td><sub></sub></td>
     <td></td>
-    <td><sub></sub></td>
+    <td></td>
+    <td>1.0000</td>
     <td></td>
     <td></td>
     <td></td>
