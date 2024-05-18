@@ -26,6 +26,7 @@ A project for synthesizing data tables based on a large model.
   <td>CTAB</td>
   <td>TabDDPM</td>
   <td>TABSYN</td>
+  <td>GReaT</td>
   <td>REaLTabFormer</td>
   
 
@@ -45,9 +46,11 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+    <td>0.6358<sub>±.0161</sub></td>
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -69,10 +72,12 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -91,14 +96,16 @@ A project for synthesizing data tables based on a large model.
     <td>0.7226<sub>±.0255</sub></td>
     <td></td>
     <td>0.6632<sub>±.0317</sub></td>
+    <td>0.6983<sub>±.0194</sub></td>
+    <td>0.6837<sub>±.0170</sub></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>0.6786<sub>±.0267</sub></td>
     
 
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -119,10 +126,12 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -144,11 +153,13 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
     
 
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -169,10 +180,12 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
     
   </tr>
   <tr>
     <td>LLE</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -192,13 +205,13 @@ A project for synthesizing data tables based on a large model.
   <tr>
   <td>Dataset</td>
   <td>Metric</td>
-  <td>Original</td>
   <td>OurModel</td>
   <td>Smote</td>
   <td>CTGAN</td>
   <td>CTAB</td>
   <td>TabDDPM</td>
   <td>TABSYN</td>
+  <td>GReaT</td>
   <td>REaLTabFormer</td>
   
   </tr>
@@ -207,13 +220,13 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">GM</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td>0.9997</td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
+    <td> 0.9980</td>
   </tr>
   <tr>
     <td>DCR</td>
@@ -242,8 +255,8 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">AD</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td>0.9514</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -276,13 +289,13 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">DI</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td>1.0000</td>
     <td></td>
     <td></td>
+    <td>0.9992</td>
+    <td>1.0000</td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>0.9988</td>
   </tr>
   <tr>
     <td>DCR</td>
@@ -311,8 +324,8 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">BU</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td>0.9329</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -346,8 +359,8 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">AB</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td> 0.8834</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -381,8 +394,8 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">CA</td>
     <td>NRS</td>
     <td></td>
-    <td></td>
     <td>1.0000</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
