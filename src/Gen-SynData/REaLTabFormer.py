@@ -8,13 +8,13 @@ import random
 # seed_value = 4
 # np.random.seed(seed_value)
 # random.seed(seed_value)
-data_name='adult'
+data_name='buddy'
 df = pd.read_csv(f'Data/{data_name}/raw/{data_name}_train.csv')
 # df = pd.read_csv('/media/data1/jiangsj/Fraud-4-57/row_data/train_set.csv')
 
 # NOTE: Remove any unique identifiers in the
 # data that you don't want to be modeled.
-seed_value=1025  #1029(0), 1028(1), 1027(2), 1026(3), 1025(4)
+seed_value=1027  #1029(0), 1028(1), 1027(2), 1026(3), 1025(4)
 # Non-relational or parent table.
 rtf_model = REaLTabFormer(
     model_type="tabular",

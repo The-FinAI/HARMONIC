@@ -72,7 +72,7 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td>0.7358<sub>±.0020</sub></td>
     <td></td>
-    <td></td>
+    <td>0.7600<sub>±.0018</sub></td>
     
   </tr>
   <tr>
@@ -261,7 +261,7 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td>0.9976</td>
     <td></td>
-    <td></td>
+    <td>0.9954</td>
   </tr>
   <tr>
     <td>DCR</td>
