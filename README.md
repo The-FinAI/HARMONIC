@@ -150,8 +150,8 @@ A project for synthesizing data tables based on a large model.
     <td>0.4013<sub>±.0141</sub></td>
     <td></td>
     <td>0.2153<sub>±.0730</sub></td>
-    <td></td>
-    <td></td>
+    <td>0.3574<sub>±.0240</sub></td>
+    <td>0.3414<sub>±.0182</sub></td>
     <td></td>
     <td></td>
     
@@ -178,7 +178,7 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>0.6304<sub>±.0036</sub></td>
     <td></td>
     <td></td>
     
