@@ -362,7 +362,7 @@ A project for synthesizing data tables based on a large model.
     <td> 0.8834</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>1.0000</td>
     <td>1.0000</td>
     <td></td>
     <td></td>
