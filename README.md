@@ -38,15 +38,15 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">GM</td>
     <td>MLE</td>
-    <td>0.4971<sub>±.0032</sub></td>
+    <td>0.50<sub>±0.00</sub></td>
     <td></td>
-    <td>0.6405<sub>±.0159</sub></td>
-    <td>0.6035<sub>±.0281</sub></td>
-    <td>0.5778<sub>±.0263</sub></td>
-    <td>0.6468<sub>±.0162</sub></td>
-    <td>0.6256<sub>±.0214</sub></td>
+    <td>0.64<sub>±0.02</sub></td>
+    <td>0.61<sub>±0.02</sub></td>
+    <td>0.57<sub>±0.02</sub></td>
+    <td>0.64<sub>±0.01</sub></td>
+    <td>0.63<sub>±0.02</sub></td>
     <td></td>
-    <td>0.6358<sub>±.0211</sub></td>
+    <td>0.65<sub>±0.01</sub></td>
   </tr>
   <tr>
     <td>LLE</td>
@@ -64,13 +64,13 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">AD</td>
     <td>MLE</td>
-    <td>0.6027<sub>±.0000</sub></td>
+    <td>0.61<sub>±0.00</sub></td>
     <td></td>
-    <td>0.7486<sub>±.0022</sub></td>
-    <td>0.7381<sub>±.0024</sub></td>
-    <td>0.7323<sub>±.0042</sub></td>
-    <td>0.7456<sub>±.0050</sub></td>
-    <td>0.7358<sub>±.0036</sub></td>
+    <td>0.75<sub>±0.00</sub></td>
+    <td>0.74<sub>±0.00</sub></td>
+    <td>0.73<sub>±0.01</sub></td>
+    <td>0.74<sub>±0.00</sub></td>
+    <td>0.73<sub>±0.01</sub></td>
     <td></td>
     <td>0.7600<sub>±.0027</sub></td>
     
@@ -91,15 +91,15 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">DI</td>
     <td>MLE</td>
-    <td>0.5524<sub>±.0068</sub></td>
+    <td>0.56<sub>±0.00</sub></td>
     <td></td>
-    <td>0.7226<sub>±.0255</sub></td>
-    <td>0.7028<sub>±.0304</sub></td>
-    <td>0.6708<sub>±.0211</sub></td>
-    <td>0.7130<sub>±.0191</sub></td>
-    <td>0.6837<sub>±.0254</sub></td>
+    <td>0.72<sub>±0.03</sub></td>
+    <td>0.71<sub>±0.02</sub></td>
+    <td>0.67<sub>±0.02</sub></td>
+    <td>0.71<sub>±0.02</sub></td>
+    <td>0.68<sub>±0.03</sub></td>
     <td></td>
-    <td>0.6786<sub>±.0304</sub></td>
+    <td>0.66<sub>±0.03</sub></td>
     
   </tr>
   <tr>
@@ -144,15 +144,15 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">AB</td>
     <td>MLE</td>
-    <td>0.4207<sub>±.0008</sub></td>
+    <td>0.42<sub>±0.00</sub></td>
     <td></td>
-    <td>0.4013<sub>±.0141</sub></td>
-    <td>0.1847<sub>±.0495</sub></td>
-    <td>0.2490<sub>±.0148</sub></td>
-    <td>0.3652<sub>±.0208</sub></td>
-    <td>0.3414<sub>±.0236</sub></td>
+    <td>0.40<sub>±0.01</sub></td>
+    <td>0.22<sub>±0.03</sub></td>
+    <td>0.24<sub>±0.01</sub></td>
+    <td>0.35<sub>±0.02</sub></td>
+    <td>0.33<sub>±0.01</sub></td>
     <td></td>
-    <td>0.3339<sub>±.0221</sub></td>
+    <td>0.33<sub>±0.02</sub></td>
     
 
   </tr>
@@ -219,24 +219,24 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">GM</td>
     <td>NRS</td>
     <td></td>
-    <td>0.9997</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
     <td></td>
-    <td> 0.9980</td>
+    <td> 1.00</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>2.7486</td>
-    <td>4.1133</td>
-    <td>5.3840</td>
-    <td>2.2313</td>
-    <td>3.9990</td>
+    <td>2.77</td>
+    <td>4.09</td>
+    <td>5.36</td>
+    <td>2.21</td>
+    <td>3.98</td>
     <td></td>
-    <td>4.5721</td>
+    <td>4.60</td>
   </tr>
     <tr>
     <td>PPL</td>
@@ -254,24 +254,24 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">AD</td>
     <td>NRS</td>
     <td></td>
-    <td>0.9514</td>
-    <td>1.0000</td>
-    <td>0.9982</td>
-    <td>0.9963</td>
-    <td>0.9976</td>
+    <td>0.95</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
     <td></td>
     <td>0.9954</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>0.1525</td>
-    <td>0.4800</td>
-    <td>0.8124</td>
-    <td>0.4922</td>
-    <td>0.8466</td>
+    <td>0.16</td>
+    <td>0.49</td>
+    <td>0.82</td>
+    <td>0.50</td>
+    <td>0.86</td>
     <td></td>
-    <td>0.5980</td>
+    <td>0.59</td>
   </tr>
     <tr>
     <td>PPL</td>
@@ -288,24 +288,24 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">DI</td>
     <td>NRS</td>
     <td></td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td>0.9992</td>
-    <td>1.0000</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
     <td></td>
-    <td>0.9988</td>
+    <td>1.00</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>0.2752</td>
-    <td>0.3374</td>
-    <td>0.7237</td>
-    <td>0.2142</td>
-    <td>1.3738</td>
+    <td>0.28</td>
+    <td>0.33</td>
+    <td>0.72</td>
+    <td>0.21</td>
+    <td>1.37</td>
     <td></td>
-    <td>0.3500</td>
+    <td>0.36</td>
   </tr>
     <tr>
     <td>PPL</td>
@@ -358,24 +358,24 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">AB</td>
     <td>NRS</td>
     <td></td>
-    <td> 0.8834</td>
-    <td> 1.0000</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td>1.0000</td>
+    <td> 0.88</td>
+    <td> 1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
     <td></td>
-    <td>0.9998</td>
+    <td>1.00</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>0.0471</td>
-    <td>0.1841</td>
-    <td>0.3341</td>
-    <td>0.1368</td>
-    <td>0.1277</td>
+    <td>0.05</td>
+    <td>0.18</td>
+    <td>0.33</td>
+    <td>0.14</td>
+    <td>0.13</td>
     <td></td>
-    <td>0.1080</td>
+    <td>0.11</td>
   </tr>
     <tr>
     <td>PPL</td>

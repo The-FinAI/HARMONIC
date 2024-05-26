@@ -327,7 +327,7 @@ def get_eval_data(input_path, task, task_type):
                 {'id': j, "query": f"{prompt}'{text}'" + '\nAnswer: ', 'answer': answer, "choices": choices,
                  "gold": gold, 'text': text})
         elif task_type == "regression":
-            answer = int(data[j][-1])
+            answer = float(data[j][-1])
             data_tmp.append(
                 {'id': j, "query": f"{prompt}'{text}'" + '\nAnswer: ', 'answer': answer, 'text': text})
     return data_tmp
@@ -342,7 +342,7 @@ def main(args):
     features = get_columns(data_path)  # list[list[str]]: (cat, num, all)
     ft_generator_data(
         raw_data_path=data_path,
-        ft_path=f"{generator_path}/knn_train.json",
+        ft_path=f"{generator_path}/knn_train_new.json",
         cols=features,
         is_fil=True,
         n=args.knn_n,
@@ -350,7 +350,7 @@ def main(args):
     )
     pre_generator_data(
         real_data_path=data_path,
-        pre_path=f"{generator_path}/knn_syn.json",
+        pre_path=f"{generator_path}/knn_syn_new.json",
         n=args.knn_n,
         seed=args.seed,
         sample_format=args.re_format,
@@ -376,7 +376,6 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("data_name", type=str, default="diabetes")
-    # parser.add_argument("prompt", type=str, default="")
     parser.add_argument("seed", type=int, default=416,
                         help="Constructing the random seed for generating synthetic data")
     parser.add_argument('knn_n', type=int, default=5, help="Number of nearest")
