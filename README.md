@@ -50,13 +50,13 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>LLE</td>
+    <td>0.7050</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.67<sub>±0.03</td>
+    <td>0.69<sub>±0.03</td>
+    <td>0.71<sub>±0.02</td>
+    <td>0.67<sub>±0.05</td>
+    <td>0.72<sub>±0.02</td>
     <td></td>
     <td></td>
   </tr>
@@ -77,7 +77,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+    <td>0.6615</td>
     <td></td>
     <td></td>
     <td></td>
@@ -104,33 +104,33 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.6954</td>
+    <td>0.74<sub>±0.02</td>
+    <td>0.69<sub>±0.04</td>
+    <td>0.72<sub>±0.04</td>
+    <td>0.62<sub>±0.09</td>
+    <td>0.72<sub>±0.03</td>
+    <td>0.77<sub>±0.01</td>
     <td></td>
     <td></td>
 
   <tr>
     <td rowspan="2">BU</td>
     <td>MLE</td>
-    <td>0.8548<sub>±.0001</sub></td>
+    <td>0.38<sub>±0.00</sub></td>
     <td></td>
-    <td>0.8380<sub>±.0056</sub></td>
-    <td><sub>±</sub></td>
-    <td><sub>±</sub></td>
-    <td>0.8440<sub>±.0057</sub></td>
-    <td>0.2619<sub>±.0060</sub></td>
+    <td>0.25<sub>±0.02</sub></td>
+    <td>0.27<sub>±0.03</sub></td>
+    <td>0.26<sub>±0.01</sub></td>
+    <td>0.27<sub>±0.01</sub></td>
+    <td>0.26<sub>±0.01</sub></td>
     <td></td>
     <td>0.2617<sub>±.0051</sub></td>
     
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+    <td>0.8804</td>
     <td></td>
     <td></td>
     <td></td>
@@ -158,7 +158,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+    <td>0.1017</td>
     <td></td>
     <td></td>
     <td></td>
@@ -171,20 +171,20 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="2">CA</td>
     <td>MLE</td>
-    <td>0.6674<sub>±.0001</sub></td>
+    <td>0.62<sub>±0.00</sub></td>
     <td></td>
-    <td>0.6395<sub>±.0062</sub></sub></td>
-    <td>-4.4512<sub>±.5546</sub></td>
-    <td>-5.3544<sub>±.7983</sub></td>
-    <td>0.6398<sub>±.0518</sub></td>
-    <td>0.6304<sub>±.0057</sub></td>
+    <td>-2.73<sub>±.4.74</sub></sub></td>
+    <td>-4.01<sub>±0.11</sub></td>
+    <td>-5.02<sub>±0.58</sub></td>
+    <td>0.63<sub>±0.00</sub></td>
+    <td>0.60<sub>±0.01</sub></td>
     <td></td>
     <td>-2.0046<sub>±3.9868</sub></td>
     
   </tr>
   <tr>
     <td>LLE</td>
-    <td></td>
+    <td>0.6309</td>
     <td></td>
     <td></td>
     <td></td>
@@ -287,7 +287,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">DI</td>
     <td>NRS</td>
-    <td></td>
+    <td>1.00</td>
     <td>1.00</td>
     <td>1.00</td>
     <td>1.00</td>
@@ -298,7 +298,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>DCR</td>
-    <td></td>
+    <td>0.43</td>
     <td>0.28</td>
     <td>0.33</td>
     <td>0.72</td>
@@ -323,22 +323,22 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">BU</td>
     <td>NRS</td>
     <td></td>
-    <td>0.9329</td>
-    <td>0.9996</td>
+    <td>0.93</td>
+    <td>1.00</td>
     <td></td>
-    <td>0.9905</td>
-    <td>0.9990</td>
+    <td>0.99</td>
+    <td>1.00</td>
     <td></td>
     <td>0.9983</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>0.1485</td>
-    <td>0.6608</td>
-    <td></td>
-    <td>0.1786</td>
-    <td>1.3763</td>
+    <td>0.15</td>
+    <td>0.66</td>
+    <td>0.70</td>
+    <td>0.18</td>
+    <td>1.38</td>
     <td></td>
     <td>0.3759</td>
   </tr>
@@ -393,22 +393,22 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="3">CA</td>
     <td>NRS</td>
     <td></td>
-    <td>1.0000</td>
-    <td>1.0000</td>
-    <td></td>
-    <td>1.0000</td>
-    <td>1.0000</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
+    <td>1.00</td>
     <td></td>
     <td>1.0000</td>
   </tr>
   <tr>
     <td>DCR</td>
     <td></td>
-    <td>0.0583</td>
-    <td>0.1201</td>
-    <td>0.1622</td>
-    <td>0.0777</td>
-    <td>0.1132</td>
+    <td>0.06</td>
+    <td>0.12</td>
+    <td>0.16</td>
+    <td>0.08</td>
+    <td>0.11</td>
     <td></td>
     <td>0.1011</td>
   </tr>

@@ -68,7 +68,8 @@ random.seed(seed_value)
 # data = fetch_california_housing(as_frame=True).frame
 data = pd.read_csv('Data/diabetes/raw/diabetes_train.csv')
 
-model = GReaT(llm='/home/wangyx/relat_to_local/mydata/SyntheticData/llm/distilgpt2', batch_size=32, epochs=50, fp16=True)
+model = GReaT(llm='/home/wangyx/relat_to_local/mydata/SyntheticData/llm/distilgpt2',
+              batch_size=32, epochs=50, fp16=True)
 model.fit(data)
 
 # 设置随机种子确保每次生成的合成数据一致
