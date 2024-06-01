@@ -65,20 +65,20 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">AD</td>
     <td>MLE</td>
     <td>0.61<sub>±0.00</sub></td>
-    <td></td>
+    <td>0.67<sub>±0.02</sub></td>
     <td>0.75<sub>±0.00</sub></td>
     <td>0.74<sub>±0.00</sub></td>
     <td>0.73<sub>±0.01</sub></td>
     <td>0.74<sub>±0.00</sub></td>
     <td>0.73<sub>±0.01</sub></td>
     <td>0.73<sub>±0.01</sub></td>
-    <td>0.7600<sub>±.0027</sub></td>
+    <td>0.76<sub>±0.00</sub></td>
     
   </tr>
   <tr>
     <td>LLE</td>
     <td>0.8077</td>
-    <td></td>
+    <td>0.80<sub>±0.02</td>
     <td>0.84<sub>±0.01</sub></td>
     <td>0.83<sub>±0.01</sub></td>
     <td>0.83<sub>±0.00</sub></td>
