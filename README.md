@@ -39,13 +39,13 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">GM</td>
     <td>MLE</td>
     <td>0.50<sub>±0.00</sub></td>
-    <td></td>
+    <td>0.55<sub>±0.03</sub></td>
     <td>0.64<sub>±0.02</sub></td>
     <td>0.61<sub>±0.02</sub></td>
     <td>0.57<sub>±0.02</sub></td>
     <td>0.64<sub>±0.01</sub></td>
     <td>0.63<sub>±0.02</sub></td>
-    <td>0.44<sub>±0.03</td>
+    <td>0.44<sub>±0.03</sub></td>
     <td>0.65<sub>±0.01</sub></td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">DI</td>
     <td>MLE</td>
     <td>0.56<sub>±0.00</sub></td>
-    <td></td>
+    <td>0.46<sub>±0.02</sub></td>
     <td>0.72<sub>±0.03</sub></td>
     <td>0.71<sub>±0.02</sub></td>
     <td>0.67<sub>±0.02</sub></td>
@@ -118,14 +118,14 @@ A project for synthesizing data tables based on a large model.
     <td rowspan="2">BU</td>
     <td>MLE</td>
     <td>0.38<sub>±0.00</sub></td>
-    <td></td>
+    <td>0.27<sub>±0.03</sub></td>
     <td>0.25<sub>±0.02</sub></td>
     <td>0.27<sub>±0.03</sub></td>
     <td>0.26<sub>±0.01</sub></td>
     <td>0.27<sub>±0.01</sub></td>
     <td>0.26<sub>±0.01</sub></td>
     <td>0.24<sub>±0.03</sub></td>
-    <td>0.2617<sub>±.0051</sub></td>
+    <td>0.26<sub>±0.00</sub></td>
     
   </tr>
   <tr>
@@ -218,7 +218,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">GM</td>
     <td>NRS</td>
-    <td></td>
+    <td>1.00</td>
     <td>1.00</td>
     <td>1.00</td>
     <td>1.00</td>
@@ -229,7 +229,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>DCR</td>
-    <td></td>
+    <td>8.08</td>
     <td>2.77</td>
     <td>4.09</td>
     <td>5.36</td>
@@ -253,7 +253,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">AD</td>
     <td>NRS</td>
-    <td></td>
+    <td>1.00</td>
     <td>0.95</td>
     <td>1.00</td>
     <td>1.00</td>
@@ -264,7 +264,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>DCR</td>
-    <td></td>
+    <td>2.47</td>
     <td>0.16</td>
     <td>0.49</td>
     <td>0.82</td>
@@ -298,7 +298,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>DCR</td>
-    <td>0.43</td>
+    <td>0.44</td>
     <td>0.28</td>
     <td>0.33</td>
     <td>0.72</td>
@@ -322,7 +322,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td rowspan="3">BU</td>
     <td>NRS</td>
-    <td></td>
+    <td>1.00</td>
     <td>0.93</td>
     <td>1.00</td>
     <td>1.00</td>
@@ -333,7 +333,7 @@ A project for synthesizing data tables based on a large model.
   </tr>
   <tr>
     <td>DCR</td>
-    <td></td>
+    <td>2.52</td>
     <td>0.15</td>
     <td>0.66</td>
     <td>0.70</td>
