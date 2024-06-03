@@ -351,7 +351,7 @@ A project for synthesizing data tables based on a large model.
     <td>—</td>
     <td>—</td>
     <td>-2.22</td>
-    <td></td>
+    <td>-41.13</td>
   </tr>
 
   <tr>
