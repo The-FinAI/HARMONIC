@@ -1,6 +1,10 @@
-# SynData
+# HARMONIC: $\mathrm{\underline{Har}nessing\ LL\underline{M}s\ f\underline{o}r\ Tabular\ Data\ Sy\underline{n}thesis\ and\ Pr\underline{i}vacy\ Prote\underline{c}tion}$
 
-A project for synthesizing data tables based on a large model.
+<!-- A project for synthesizing data tables based on a large model. -->
+Data serves as the fundamental foundation for advancing deep learning, particularly tabular data presented in a structured format, which is highly conducive to modeling. However, even in the era of LLM, obtaining tabular data from sensitive domains remains a challenge due to privacy or copyright concerns. Hence, exploring how to effectively use models like LLMs to generate realistic and privacy-preserving synthetic tabular data is emergent.
+In this paper, we take a step forward to explore LLMs for tabular data synthesis and privacy protection, by introducing a new framework HARMONIC for tabular data generation and evaluation. In our tabular data generation framework, unlike previous small-scale LLM-based methods that rely on continued pre-training, we explore the larger-scale LLMs with fine-tuning to generate tabular data and enhance privacy. Based on idea of the k-nearest neighbors algorithm, an instruction fine-tuning dataset is constructed to inspire LLMs to discover inter-row relationships. Then, with fine-tuning, LLMs are trained to remember the format and connections of the data rather than the data itself, which reduces the risk of privacy leakage.
+In our evaluation framework, we develop specific privacy risk metrics for LLM synthetic data generation, as well as performance evaluation metrics for downstream LLM tasks. 
+Our experiments find that this tabular data generation framework achieves equivalent performance to existing methods with better privacy, which also demonstrates our evaluation framework for the effectiveness of synthetic data and privacy risks in LLM scenarios.
 
 ## Contents
 
@@ -78,7 +82,7 @@ A project for synthesizing data tables based on a large model.
   <tr>
     <td>LLE</td>
     <td>0.81<sub>±0.00</sub></td>
-    <td>0.80<sub?>±0.02</sub></td>
+    <td>0.80<sub>±0.02</sub></td>
     <td>0.84<sub>±0.01</sub></td>
     <td>0.83<sub>±0.01</sub></td>
     <td>0.83<sub>±0.00</sub></td>
@@ -141,7 +145,7 @@ A project for synthesizing data tables based on a large model.
     <td>0.70<sub>±0.14</sub></td>
   </tr>
 
-  <tr>
+  <!-- <tr>
     <td rowspan="2">AB</td>
     <td>MLE</td>
     <td>0.42<sub>±0.00</sub></td>
@@ -166,9 +170,9 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td></td> -->
 
-  <tr>
+  <!-- <tr>
     <td rowspan="2">CA</td>
     <td>MLE</td>
     <td>0.62<sub>±0.00</sub></td>
@@ -192,7 +196,7 @@ A project for synthesizing data tables based on a large model.
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td></td> -->
 </table>
 
 
@@ -354,7 +358,7 @@ A project for synthesizing data tables based on a large model.
     <td>-41.13</td>
   </tr>
 
-  <tr>
+  <!-- <tr>
     <td rowspan="3">AB</td>
     <td>NRS</td>
     <td></td>
@@ -387,9 +391,9 @@ A project for synthesizing data tables based on a large model.
     <td>—</td>
     <td></td>
     <td></td>
-  </tr>
+  </tr> -->
 
-  <tr>
+  <!-- <tr>
     <td rowspan="3">CA</td>
     <td>NRS</td>
     <td></td>
@@ -422,7 +426,7 @@ A project for synthesizing data tables based on a large model.
     <td>—</td>
     <td></td>
     <td></td>
-  </tr>
+  </tr> -->
 </table>
 
 
