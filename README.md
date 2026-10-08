@@ -1,22 +1,45 @@
-# HARMONIC: $\mathrm{\underline{Har}nessing\ LL\underline{M}s\ f\underline{o}r\ Tabular\ Data\ Sy\underline{n}thesis\ and\ Pr\underline{i}vacy\ Prote\underline{c}tion}$
+<div align="center">
 
-<!-- A project for synthesizing data tables based on a large model. -->
+<h1>HARMONIC</h1>
+
+<p><b>Harnessing LLMs for Tabular Data Synthesis and Privacy Protection</b></p>
+
+<p>
+  <a href="https://arxiv.org/abs/2408.02927"><img src="https://img.shields.io/badge/arXiv-2408.02927-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2408.02927">Paper</a>
+</p>
+
+</div>
+
+## Overview
+
+**HARMONIC** is a framework for generating and evaluating synthetic tabular data with large language models (LLMs), with a focus on privacy protection. Instead of relying on continued pre-training of small LLMs, HARMONIC fine-tunes larger LLMs on an instruction dataset built with a k-nearest-neighbors idea, so that the model learns the format of and relationships between rows rather than memorizing the data itself. The evaluation framework adds privacy-risk metrics tailored to LLM-generated data, as well as performance metrics for downstream LLM tasks. Experiments show that HARMONIC matches existing methods in performance while offering better privacy.
+
+<details>
+<summary><b>Abstract</b></summary>
+
 Data serves as the fundamental foundation for advancing deep learning, particularly tabular data presented in a structured format, which is highly conducive to modeling. However, even in the era of LLM, obtaining tabular data from sensitive domains remains a challenge due to privacy or copyright concerns. Hence, exploring how to effectively use models like LLMs to generate realistic and privacy-preserving synthetic tabular data is emergent.
 In this paper, we take a step forward to explore LLMs for tabular data synthesis and privacy protection, by introducing a new framework HARMONIC for tabular data generation and evaluation. In our tabular data generation framework, unlike previous small-scale LLM-based methods that rely on continued pre-training, we explore the larger-scale LLMs with fine-tuning to generate tabular data and enhance privacy. Based on idea of the k-nearest neighbors algorithm, an instruction fine-tuning dataset is constructed to inspire LLMs to discover inter-row relationships. Then, with fine-tuning, LLMs are trained to remember the format and connections of the data rather than the data itself, which reduces the risk of privacy leakage.
 In our evaluation framework, we develop specific privacy risk metrics for LLM synthetic data generation, as well as performance evaluation metrics for downstream LLM tasks. 
 Our experiments find that this tabular data generation framework achieves equivalent performance to existing methods with better privacy, which also demonstrates our evaluation framework for the effectiveness of synthetic data and privacy risks in LLM scenarios.
 
+</details>
+
 ## Contents
 
-- [SynData](#syndata)
-  - [Contents](#contents)
-    - [Results](#results)
-    - [Examples](#examples)
+- [Overview](#overview)
+- [Results](#results)
+- [Usage](#usage)
+- [Citation](#citation)
+- [License](#license)
 
+## Results
 
-### Results
-
-<center>Table1. The values of machine learning efficiency(MLE) and large language model efficiency(LLE)</center>
+<p align="center"><b>Table 1.</b> Machine learning efficiency (MLE) and large language model efficiency (LLE)</p>
 
 <table>
 
@@ -117,13 +140,14 @@ Our experiments find that this tabular data generation framework achieves equiva
     <td>0.77<sub>±0.01</sub></td>
     <td>0.71<sub>±0.03</sub></td>
     <td>0.70<sub>±0.04</sub></td>
+  </tr>
 
   <tr>
     <td rowspan="2">BU</td>
     <td>MLE</td>
     <td>0.38<sub>±0.00</sub></td>
     <td>0.27<sub>±0.03</sub></td>
-*   <td>0.25<sub>±0.02</sub></td>
+    <td>0.25<sub>±0.02</sub></td>
     <td>0.27<sub>±0.03</sub></td>
     <td>0.26<sub>±0.01</sub></td>
     <td>0.27<sub>±0.01</sub></td>
@@ -199,9 +223,7 @@ Our experiments find that this tabular data generation framework achieves equiva
     <td></td> -->
 </table>
 
-
-<center>Table2. The values of f mean Distance to Closest Record
-(DCR), NewRowSynthesis(NRS) and PPL-diff(PPL)</center>
+<p align="center"><b>Table 2.</b> Mean Distance to Closest Record (DCR), New Row Synthesis (NRS) and PPL-diff (PPL)</p>
 
 <table>
 
@@ -429,40 +451,65 @@ Our experiments find that this tabular data generation framework achieves equiva
   </tr> -->
 </table>
 
+## Usage
 
-### Examples
+The pipeline has four steps: preprocess the data, fine-tune the generator, sample synthetic data, and evaluate it. Scripts live in [`scripts/`](scripts); datasets live in [`Data/`](Data).
 
-<ins>Preprocess Data.</ins>
+### 1. Preprocess data
 
-Template and example
+Template and example:
 
 ```bash
 python scripts/preprocess_data.py [data_name] [seed] [knn_n] [task_type] [des] [re_format] [sample_num]
 python scripts/preprocess_data.py german 416 5 "binary classification" "user credit scores" dict 700
 ```
 
-<ins>Train Generator.</ins>
+### 2. Train the generator
 
-Template and example
+Template and example:
 
 ```bash
 sh scripts/sft_gen.sh
 ```
 
-<ins>Sample.</ins>
+### 3. Sample synthetic data
 
-Template and example
+Template and example:
 
 ```bash
 python scripts/sample.py [data_name] [sample_num] [seed] [temperature] [max_length] [task_type] [device]
 python scripts/sample.py german 700 2416 0.7 2048 'binary classification' 'cuda:0'
 ```
 
-<ins>Eval</ins>
+### 4. Evaluate
 
-Template and example
+Template and example:
 
 ```bash
 sh scripts/sft_lle.sh
 sh scripts/eval-llama2.sh
 ```
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@misc{wang2024harmonic,
+  title         = {HARMONIC: Harnessing LLMs for Tabular Data Synthesis and Privacy Protection},
+  author        = {Yuxin Wang and Duanyu Feng and Yongfu Dai and Zhengyu Chen and Jimin Huang and Sophia Ananiadou and Qianqian Xie and Hao Wang},
+  year          = {2024},
+  eprint        = {2408.02927},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2408.02927}
+}
+```
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE). Datasets and models on Hugging Face keep their own licenses, stated on each card.
+
+---
+
+<p align="center">Built by <a href="https://thefin.ai">The Fin AI</a> · <a href="https://huggingface.co/TheFinAI">Hugging Face</a> · <a href="https://github.com/The-FinAI">GitHub</a></p>
